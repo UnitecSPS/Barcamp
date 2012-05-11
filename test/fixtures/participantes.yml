@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codigo: 1
+  nombre: MyString
+  charla: 
+
+two:
+  codigo: 1
+  nombre: MyString
+  charla: 

@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @charla.nombre %>
+</p>
+
+<p>
+  <b>Expositor:</b>
+  <%= @charla.expositor %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @charla.descripcion %>
+</p>
+
+<h2>Participantes</h2>
+<% @charla.participantes.each do |participante| %>
+  <p>
+    <b>codigo:</b>
+    <%= participante.codigo %>
+  </p>
+ 
+  <p>
+    <b>nombre:</b>
+    <%= participante.nombre %>
+  </p>
+<% end %>
+
+<h2>Agregar Participante</h2>
+<%= form_for([@charla, @charla.participantes.build]) do |f| %>
+  <div class="field">
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_area :nombre %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Edit', edit_charla_path(@charla) %> |
+<%= link_to 'Back', charlas_path %>
