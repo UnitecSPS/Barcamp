@@ -1,4 +1,6 @@
 Barcamp::Application.routes.draw do
+  resources :authors
+
   resources :charlas do
     resources :participantes
   end

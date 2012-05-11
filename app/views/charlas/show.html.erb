@@ -15,6 +15,13 @@
   <%= @charla.descripcion %>
 </p>
 
+<p>
+  <b>Author:</b>
+  <%- if @charla.author %>
+    <%= @charla.author.nombre %>
+  <%- end %>
+</p>
+
 <h2>Participantes</h2>
 <% @charla.participantes.each do |participante| %>
   <p>
